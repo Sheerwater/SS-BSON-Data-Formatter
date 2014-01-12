@@ -1,5 +1,5 @@
 {
-    "name":        "Sheerwater/SS-BSON-Data-Formatter",
+    "name":        "sheerwater/ss-bson-data-formatter",
     "description": "A BSON Data Formatter for the SilverStripe framework.",
     "type":        "silverstripe-module",
     "keywords":    ["silverstripe", "bson", "data", "formatter"],
