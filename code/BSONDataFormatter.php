@@ -53,17 +53,17 @@ class BSONDataFormatter extends JSONDataFormatter
      */
     public function convertDataObjectSet(SS_List $set, $fields = null)
     {
-        $items = array();
+        $items = [];
         foreach ($set as $do) {
             /** @var DataObject $do */
             if (!$do->canView()) continue;
             $items[] = $this->convertDataObjectToJSONObject($do, $fields);
         }
 
-        $serobj = ArrayData::array_to_object(array(
+        $serobj = ArrayData::array_to_object([
             "totalSize" => (is_numeric($this->totalSize)) ? $this->totalSize : null,
             "items"     => $items
-        ));
+        ]);
 
         /** @noinspection PhpUndefinedFunctionInspection */
 

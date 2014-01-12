@@ -1,0 +1,16 @@
+{
+    "name":        "Sheerwater/SS-BSON-Data-Formatter",
+    "description": "A BSON Data Formatter for the SilverStripe framework.",
+    "type":        "silverstripe-module",
+    "keywords":    ["silverstripe", "bson", "data", "formatter"],
+    "authors":     [
+        {
+            "name":  "Nik Rolls",
+            "email": "nik@rolls.cc"
+        }
+    ],
+    "require":     {
+        "php":                    ">=5.4.0",
+        "silverstripe/framework": "3.*"
+    }
+}
