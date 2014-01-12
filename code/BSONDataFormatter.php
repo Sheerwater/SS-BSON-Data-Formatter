@@ -53,6 +53,8 @@ class BSONDataFormatter extends JSONDataFormatter
      */
     public function convertDataObjectSet(SS_List $set, $fields = null)
     {
+        $this->checkForBson();
+
         $items = [];
         foreach ($set as $do) {
             /** @var DataObject $do */
@@ -67,12 +69,15 @@ class BSONDataFormatter extends JSONDataFormatter
 
         /** @noinspection PhpUndefinedFunctionInspection */
 
-        return bson_enqcode($serobj);
+        return bson_encode($serobj);
     }
 
     public function convertStringToArray($strData)
     {
+        $this->checkForBson();
+        
         /** @noinspection PhpUndefinedFunctionInspection */
+
         return bson_decode($strData);
     }
 }
